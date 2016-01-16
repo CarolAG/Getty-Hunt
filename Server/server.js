@@ -13,7 +13,6 @@ app.get('/', function(req, res){
 
 
 app.post('/start', gettyLibScraper.getPaintings);
-
 //  gettyLibScraper.getPaintings);
 
 app.get('/scramble', function(req, res){
