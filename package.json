@@ -4,7 +4,7 @@
   "description": "A scavanger hunt through the Getty museum to make your experience more interactive",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon Server/server.js",
+    "start": "npm run start-server; ./node_modules/nodemon/bin/nodemon.js server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,8 +21,11 @@
     "async": "^1.5.2",
     "bower": "^1.7.2",
     "cheerio": "^0.19.0",
+    "ejs": "^2.3.4",
     "express": "^4.13.3",
+    "mysql": "^2.10.2",
     "nodemon": "^1.8.1",
+    "pg-hstore": "^2.3.2",
     "request": "^2.67.0",
     "sequelize": "^3.13.0"
   }

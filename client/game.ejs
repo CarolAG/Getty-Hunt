@@ -1,0 +1,29 @@
+<!-- Like ERB, JavaScript between <% %> is executed. JavaScript between <%= %> adds HTML to the result. -->
+
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Start the Game</title>
+</head>
+<body>
+  Scramble
+    <input type='submit' value='scramble'></button>
+
+    <div>  picture </div>
+    <% if (picture.image === 'image not available'){ %>
+      <div> <%= 'image is not available' %> </div>
+          <% } else { %>
+      <div> <%= picture.image %> </div>
+    <% } %>
+    <div> <%= picture.link %> </div>
+    <div> <%= picture.title %> </div>
+    <div> <%= picture.maker %> </div>
+    <div> <%= picture.medium %> </div>
+    <div> <%= picture.date %> </div>
+
+  </form>
+</body>
+</html>
+<!-- to generate randomizer for missing input field think of whackamole. all divs had a number the randomizer landed on one of the numbers and that number then had the mole appear.
+here, all the info divs have a number, a randomized lands on one of those numbers, if the div's number matches the randomizer number then that div becomes a form input box and not
+the rendering of the the information string -->

@@ -1,0 +1,16 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Getty-Hunt</title>
+</head>
+<body>
+  Signup
+  <form method='POST' action='/start'>
+    <input type='submit' value='start'></button>
+    <% if (error) { %>
+      <div>  Error </div>
+      <div> <%= error %> </div>
+    <% } %>
+  </form>
+</body>
+</html>
