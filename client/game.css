@@ -1,0 +1,61 @@
+@font-face {
+    font-family:Gill Sans Regular;
+    src: url(/GillSans.ttc);
+}
+
+.header{
+  background-color: #303030;
+  width: 100%;
+  height: 3%;
+  margin: -8px;
+  color: white;
+  padding: 1% 0 1% 2%;
+  font-size: 17px;
+  font-family: 'Oswald';
+}
+
+.paintingInfo{
+  background-color: #f1f1f1;
+  margin-left:74%;
+  padding-left: 4px;
+  height:35%;
+  width: 25%;
+  z-index: 1;
+  font-family: 'Oswald';
+  font-weight: 300;
+  margin-top: -10%;
+}
+
+.content{
+  /*background-color: #f1f1f1;*/
+  height: 60%;
+  margin-top: 2%;
+}
+
+.justImage{
+    height:610px;
+    width: 650px;
+    border-style: solid;
+    margin: 0 auto;
+    z-index: -1;
+}
+
+.image{
+  width: 100%;
+  height: 100%;
+}
+
+.bgimg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  background-image: url('getty.jpg');
+  -webkit-filter: blur(9px);
+  -moz-filter: blur(9px);
+  -o-filter: blur(9px);
+  -ms-filter: blur(9px);
+  filter: blur(9px);
+  z-index: -1;
+}

@@ -17,10 +17,5 @@ function randomPic (callback) {
     callback(picture);
   });
   //console.log('picccc', pic);
-  // .then (function (err, picture){
-  //   console.log('the picture', picture);
-  //     console.log('where is this callback', callback);
-  //   if(!err) return callback(picture);
-  // });
 }
 module.exports = scramble;

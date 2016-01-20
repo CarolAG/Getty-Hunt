@@ -44,7 +44,7 @@ gettyLibScraper.getPaintings = getPaintings;
                 } else {
                   scavangerHuntInfo.image = $('.cs-enlarge', everyImageThumbnail).attr('href');
                 }
-                console.log('IS THIS THE F^&* IMAGE URL??????????', $('.cs-enlarge', everyImageThumbnail).attr('href') );
+                //console.log('IS THIS THE F^&* IMAGE URL??????????', $('.cs-enlarge', everyImageThumbnail).attr('href') );
               //console.log('everyPainting',$(everyPainting).text());
             })
 

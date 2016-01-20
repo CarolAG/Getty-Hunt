@@ -4,24 +4,52 @@
 <head>
   <meta charset="UTF-8">
   <title>Start the Game</title>
+    <link rel="stylesheet" type="text/css" href="/game.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald:300,400' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 </head>
-<body>
-  Scramble
-    <input type='submit' value='scramble'></button>
-
-    <div>  picture </div>
-    <% if (picture.image === 'image not available'){ %>
-      <div> <%= 'image is not available' %> </div>
+<body >
+    <div class = 'header'> <%= picture.title %> </div>
+    <div class ='bgimg'></div>
+    <div class ='content' >
+      <div class ='justImage'>
+          <% if (null || picture.image === 'image not available'){ %>
+          <div> <%= 'image is not available' %> </div>
           <% } else { %>
-      <div> <%= picture.image %> </div>
-    <% } %>
-    <div> <%= picture.link %> </div>
-    <div> <%= picture.title %> </div>
-    <div> <%= picture.maker %> </div>
-    <div> <%= picture.medium %> </div>
-    <div> <%= picture.date %> </div>
+          <div class= 'img' > <img class='image' src= <%= picture.image %> >
+          </div>
+          <% } %>
+      </div>
+      <div class = 'paintingInfo'>
 
-  </form>
+        <% if (100 <picture.number < 200){%>
+          <form method="POST" action='/check'>
+            Title: <input type="text" class ='title' name="Title" value="Title">
+          </form>
+          <div> Artist: <%= picture.maker %> </div>
+          <div> Medium: <%= picture.medium %> </div>
+          <div> Date: <%= picture.date %> </div>
+          <a href= <%= picture.link %> > History and Facts about <%= picture.title %></a>
+        <% } else if ( picture.number < 100)  { %>
+          <div> Title: <%= picture.title %> </div>
+          <form>
+            <input name="Artist" placeholder="Artist"></input>
+          </form>
+          <div> Medium: <%= picture.medium %> </div>
+          <div> Date: <%= picture.date %> </div>
+          <a href= <%= picture.link %> > History and Facts about <%= picture.title %></a>
+        <% } else if (picture.number > 300)  { %>
+          <div> Title: <%= picture.title %> </div>
+          <div> Artist: <%= picture.maker %> </div>
+          <div> Medium: <%= picture.medium %> </div>
+          <form>
+            <input name="Date" placeholder="Date"></input>
+          </form>
+        <% } %>
+
+    </div>
+  </div>
+
 </body>
 </html>
 <!-- to generate randomizer for missing input field think of whackamole. all divs had a number the randomizer landed on one of the numbers and that number then had the mole appear.

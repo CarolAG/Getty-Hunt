@@ -2,11 +2,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Getty-Hunt</title>
+  <link rel="stylesheet" type="text/css" href="/start.css">
 </head>
 <body>
-  Signup
+  <img class = 'logo' src = gettylogo.png >
+  <div class = 'topBorder'> <p class = 'title'>The Getty Hunt</p></div>
+    <div class = 'instructions'> LET THE HUNT BEGIN
+    </div>
   <form method='POST' action='/start'>
-    <input type='submit' value='start'></button>
+    <input  class = 'startButton' type='submit' value='Start the Hunt'></button>
     <% if (error) { %>
       <div>  Error </div>
       <div> <%= error %> </div>
