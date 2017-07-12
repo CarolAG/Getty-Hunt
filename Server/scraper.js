@@ -16,7 +16,7 @@ gettyLibScraper.getPaintings = getPaintings;
 
     //doing an http get req to the getty lib pg to get a JSON obj
     request(paintingsDir, function(err, response){
-      if (err) response.status(404).send('404 SOMETHING WENT HORRIBLY WRONG!!!')
+      if (err) response.status(404).send('404 Error')
       //loading the html of the getty pg into cheerio
       var $ = cheerio.load(response.body);
       //grab every painting summary on pg (DOM element the div). It's an obj if you console.log(grab1)
@@ -44,12 +44,12 @@ gettyLibScraper.getPaintings = getPaintings;
                 } else {
                   scavangerHuntInfo.image = $('.cs-enlarge', everyImageThumbnail).attr('href');
                 }
-                //console.log('IS THIS THE F^&* IMAGE URL??????????', $('.cs-enlarge', everyImageThumbnail).attr('href') );
+                //console.log('IMAGE URL??', $('.cs-enlarge', everyImageThumbnail).attr('href') );
               //console.log('everyPainting',$(everyPainting).text());
             })
 
             //console.log('elem', $(elem).html());
-            //console.log('IS THIS THE F^&* IMAGE URL??????????', $('', elem).attr('href'));
+            //console.log('IMAGE URL?', $('', elem).attr('href'));
             var lengthOfDateSect = $('td .cs-value', elem).eq(4).text().length;
             scavangerHuntInfo.link = $('a', elem).attr('href');
             scavangerHuntInfo.title = $('td .cs-value', elem).eq(0).text();
@@ -79,5 +79,4 @@ gettyLibScraper.getPaintings = getPaintings;
 
   }
 
-//don't forget to exports! your obj, even if you are already 'requiring' the file elsewhere
 module.exports = gettyLibScraper;
